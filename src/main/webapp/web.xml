@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+id="WebApp_ID" version="3.0">
+
+<!-- ******************************* CREATE ********************************** -->
+
+<servlet>
+	<servlet-name> createServlet </servlet-name>
+	<servlet-class> com.hibernateCrud.CRUD_hibernate.controllers.CreateBookController </servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name> createServlet </servlet-name>
+	<url-pattern> /toCreateBook </url-pattern>
+</servlet-mapping>
+
+
+<!-- ******************************* READ ************************************* -->
+<servlet>
+	<servlet-name> readServlet </servlet-name>
+	<servlet-class> com.hibernateCrud.CRUD_hibernate.controllers.MainController </servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name> readServlet </servlet-name>
+	<url-pattern> /toAllBooks </url-pattern>
+</servlet-mapping>
+
+<!-- ******************************* UPDATE ************************************* -->
+<servlet>
+	<servlet-name> updateServlet </servlet-name>
+	<servlet-class> com.hibernateCrud.CRUD_hibernate.controllers.UpdateBookController </servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name> updateServlet </servlet-name>
+	<url-pattern> /updateBook </url-pattern>
+</servlet-mapping>
+
+
+<!-- ******************************** DELETE ************************************** -->
+<servlet>
+	<servlet-name> deleteServlet </servlet-name>
+	<servlet-class> com.hibernateCrud.CRUD_hibernate.controllers.DeleteBookController </servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name> deleteServlet </servlet-name>
+	<url-pattern> /deleteBook </url-pattern>
+</servlet-mapping>
+
+
+<!-- *************************************** WELCOME FILE **************************************** -->
+
+<welcome-file-list>
+	<welcome-file> listBooks.jsp </welcome-file>
+</welcome-file-list>
+
+</web-app>
